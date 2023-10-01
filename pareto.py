@@ -1,6 +1,6 @@
 from crud import iniciocrud,incluir_venda,exibir_vendas,editar_vendas,excluir_vendas,salvar_vendas_em_arquivo,carregar_vendas_do_arquivo
 from ana import analise_pareto
-print("Bem-vindo à Loja TRAKEY - Revendedora de Televisões\n*Programa realizado por:  Gustavo Freitas, Larissa Matsuda, Roger Santos e Suellen Donato* ")
+print("Bem-vindo à Loja TRAKEY - Revendedora de Televisões\n*Programa realizado por: Larissa Matsuda, Roger Santos e Suellen Donato* ")
 
 while True:
     print("\nOpções:")
