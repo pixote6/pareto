@@ -4,21 +4,21 @@ def incluir_venda(vendas):
     print("2 - Televisão LED")
     print("3 - Televisão Tubo")
     
-    opcao_television = input("Digite o número correspondente ao tipo de televisão: ")
+    opcao_televisao = input("Digite o número correspondente ao tipo de televisão: ")
     
-    if opcao_television == '1':
-        tipo_television = "LCD"
-    elif opcao_television == '2':
-        tipo_television = "LED"
-    elif opcao_television == '3':
-        tipo_television = "Tubo"
+    if opcao_televisao == '1':
+        tipo_televisao = "LCD"
+    elif opcao_televisao == '2':
+        tipo_televisao = "LED"
+    elif opcao_televisao == '3':
+        tipo_televisao = "Tubo"
     else:
         print("Opção inválida. Registrando como 'Outro'")
-        tipo_television = "Outro"
+        tipo_televisao = "Outro"
     
-    valor_venda = float(input("Digite o valor da venda: $"))
+    valor_venda = float(input("Digite o valor da venda: R$"))
 
-    venda_info = f"{tipo_television},{valor_venda:.2f}"
+    venda_info = f"{tipo_televisao},{valor_venda:.2f}"
 
     vendas.append(venda_info)
     print("Venda registrada com sucesso!")
@@ -26,17 +26,17 @@ def incluir_venda(vendas):
 def exibir_vendas(vendas):
     print("\nVendas registradas:")
     for i, venda in enumerate(vendas, start=1):
-        tipo_television, valor_venda = venda.split(',')
-        print(f"{i} - Tipo: {tipo_television}, Valor: ${valor_venda}")
+        tipo_televisao, valor_venda = venda.split(',')
+        print(f"{i} - Tipo: {tipo_televisao}, Valor: R${valor_venda}")
 
 def editar_vendas(vendas):
     exibir_vendas(vendas)
     numero_venda = int(input("Digite o número da venda que deseja editar: ")) - 1
 
     if 0 <= numero_venda < len(vendas):
-        novo_valor = float(input("Digite o novo valor da venda: $"))
-        tipo_television, _ = vendas[numero_venda].split(',')
-        vendas[numero_venda] = f"{tipo_television},{novo_valor:.2f}"
+        novo_valor = float(input("Digite o novo valor da venda: R$"))
+        tipo_televisao, _ = vendas[numero_venda].split(',')
+        vendas[numero_venda] = f"{tipo_televisao},{novo_valor:.2f}"
         print("Venda editada com sucesso!")
     else:
         print("Número de venda inválido.")
