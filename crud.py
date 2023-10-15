@@ -3,6 +3,7 @@ def incluir_venda(vendas):
     print("1 - Televisão LCD")
     print("2 - Televisão LED")
     print("3 - Televisão Tubo")
+    print("4 - Outro tipo de Televisão")
     
     opcao_televisao = input("Digite o número correspondente ao tipo de televisão: ")
     
@@ -13,9 +14,8 @@ def incluir_venda(vendas):
     elif opcao_televisao == '3':
         tipo_televisao = "Tubo"
     else:
-        print("Opção inválida. Registrando como 'Outro'")
-        tipo_televisao = "Outro"
-    
+        tipo_televisao = input("Digite o nome do tipo de televisão: ")
+
     valor_venda = float(input("Digite o valor da venda: R$"))
 
     venda_info = f"{tipo_televisao},{valor_venda:.2f}"
